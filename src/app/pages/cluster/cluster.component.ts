@@ -25,6 +25,11 @@ import { environment } from './../../../environments/environment';
 export class ClusterComponent implements OnInit {
   type_source: string = environment.typeSource;
   cluster_id: number = 0;
+  imageLoaded: { [key: string]: boolean } = {};
+  imageList = ['_numero_publicacoes_por_ano.png', '_top_10_autores.png', '_top_10_instituicoes.png', '_top_10_keywords.png','_type_cluster.png'];
+  
+  
+  
   constructor(private route: ActivatedRoute,
     private tableService: TableServices,) { }
 
