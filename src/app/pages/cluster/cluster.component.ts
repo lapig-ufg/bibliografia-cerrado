@@ -35,7 +35,7 @@ export class ClusterComponent implements OnInit {
   }
   setCluster(direction: boolean): void {
     if (direction){
-        if (this.cluster_id === 39) {
+        if (this.cluster_id === 33) {
           this.cluster_id = 0
         }else{
           this.cluster_id = this.cluster_id +1
@@ -43,7 +43,7 @@ export class ClusterComponent implements OnInit {
 
     }else{
       if (this.cluster_id === 0) {
-        this.cluster_id = 39
+        this.cluster_id = 33
       }else{
         this.cluster_id = this.cluster_id -1
       }
