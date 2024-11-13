@@ -1,11 +1,11 @@
 {
-    "name": "grassland-literature-review",
+    "name": "bibliografia-cerrado",
     "version": "1.0.0",
     "scripts": {
         "ng": "ng",
         "start": "npx ng serve",
         "build": "ng build",
-        "watch": "ng build --watch --configuration development",
+        "watch": "ng build --configuration development  --base-href '/bibliografia-cerrado/",
         "test": "ng test",
         "lint": "ng lint"
     },

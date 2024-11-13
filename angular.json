@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "grassland-literature-review": {
+        "bibliografia-cerrado": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/grassland-literature-review",
+                        "outputPath": "dist/bibliografia-cerrado",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
@@ -69,10 +69,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "grassland-literature-review:build:production"
+                            "buildTarget": "bibliografia-cerrado:build:production"
                         },
                         "development": {
-                            "buildTarget": "grassland-literature-review:build:development"
+                            "buildTarget": "bibliografia-cerrado:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "buildTarget": "grassland-literature-review:build"
+                        "buildTarget": "bibliografia-cerrado:build"
                     }
                 },
                 "test": {

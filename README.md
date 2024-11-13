@@ -27,5 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To build and deploy your Angular application with the specified base href and move the build files to a specific directory, use the following commands:
 
 ```sh
-   ng build --base-href "/grassland-literature-review/" && rsync -av --delete dist/grassland-literature-review/ site/browser/ && npx angular-cli-ghpages --dir=site/browser
+   ng build --base-href "/bibliografia-cerrado/" && rsync -av --delete dist/bibliografia-cerrado/ site/browser/ && npx angular-cli-ghpages --dir=site/browser
 ```
