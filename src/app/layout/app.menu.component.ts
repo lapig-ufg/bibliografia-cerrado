@@ -32,6 +32,17 @@ export class AppMenuComponent implements OnInit {
                         routerLink: ['/bibliografia/cluster']
                     }
                 ]
+            },
+            {
+                label: 'Metodo',
+                icon: 'pi pi-home',
+                items: [
+                    {
+                        label: 'Metodo',
+                        icon: 'pi pi-fw pi-book',
+                        routerLink: ['/bibliografia/metodo']
+                    }
+                ]
             }
         ];
     }
