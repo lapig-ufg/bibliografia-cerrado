@@ -11,7 +11,7 @@ import {ClusterComponent} from "../cluster/cluster.component";
             component: HomeComponent },
         {
             path: 'cluster',
-            data: {breadcrumb: 'Type Source'},
+            data: {breadcrumb: 'Cerrado'},
             component: ClusterComponent
         }
     ])],
