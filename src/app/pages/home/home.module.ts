@@ -8,9 +8,12 @@ import {HeadComponent} from "../../shared/head/head.component";
 import { TabViewModule } from 'primeng/tabview';
 import {ImageModule} from "primeng/image";
 import {ButtonModule} from "primeng/button";
+import { MarkdownModule } from 'ngx-markdown';
+
 
 @NgModule({
     imports: [
+        MarkdownModule,
         CommonModule,
         HomeRoutingModule,
         TableComponent,
