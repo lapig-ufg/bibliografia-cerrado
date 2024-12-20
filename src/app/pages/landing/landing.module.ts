@@ -8,6 +8,7 @@ import { StyleClassModule } from 'primeng/styleclass';
 import { AppConfigModule } from 'src/app/layout/config/app.config.module';
 import { AnimateEnterDirective } from './animateenter.directive';
 import {RippleModule} from "primeng/ripple";
+import {ImageModule} from "primeng/image";
 
 @NgModule({
     imports: [
@@ -18,6 +19,7 @@ import {RippleModule} from "primeng/ripple";
         StyleClassModule,
         AppConfigModule,
         RippleModule,
+        ImageModule,
     ],
     declarations: [LandingComponent, AnimateEnterDirective]
 })
