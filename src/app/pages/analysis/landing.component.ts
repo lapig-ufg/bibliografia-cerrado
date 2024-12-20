@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { Subscription } from 'rxjs';
 
+
 @Component({
     templateUrl: './landing.component.html',
     styleUrls: ['./landing.component.scss']

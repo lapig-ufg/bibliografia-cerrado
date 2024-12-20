@@ -8,9 +8,11 @@ import { StyleClassModule } from 'primeng/styleclass';
 import { AppConfigModule } from 'src/app/layout/config/app.config.module';
 import { AnimateEnterDirective } from './animateenter.directive';
 import {RippleModule} from "primeng/ripple";
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
     imports: [
+        MarkdownModule,
         CommonModule,
         LandingRoutingModule,
         ButtonModule,

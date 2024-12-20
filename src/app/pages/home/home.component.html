@@ -1,15 +1,14 @@
 
 <p-tabView>
-    <p-tabPanel header="Graphics">
-        <div *ngFor="let data of ['1_evolucao', '2_autores', '3_institu', '4_keywords_all']; " class="grid">
-            <div class="flex justify-content-start flex-wrap col-offset-2 col-8">
-                <div class="flex justify-content-evenly w-full">
-                    <p-image [src]="'https://s3.lapig.iesa.ufg.br/public/literatura/'+type_source+'/graficos/all/'+data+'.png'" [alt]="data " width="100%" />
-                    
-                </div>
-            </div>
-            
+    <p-tabPanel header="Análise Exploratória">
+        <div class="flex justify-content-center flex-wrapflex justify-content-center flex-wrap">
+            <markdown style="width: 65%;"
+            mermaid
+            src="assets/markdown/descritivas/descritivas.md">
+            </markdown>
         </div>
+
+
     </p-tabPanel>
     <p-tabPanel header="DataBase">
         <app-table></app-table>

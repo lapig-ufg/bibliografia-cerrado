@@ -6,6 +6,7 @@ import { AppLayoutModule } from './layout/app.layout.module';
 import {LoadingModule} from "./shared/components/loading/loading.module";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {LoadingInterceptor} from "./shared/components/loading";
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import {LoadingInterceptor} from "./shared/components/loading";
     imports: [
         AppRoutingModule,
         AppLayoutModule,
-        LoadingModule
+        LoadingModule,
+        MarkdownModule.forRoot(),
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

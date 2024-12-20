@@ -16,9 +16,9 @@ export class AppMenuComponent implements OnInit {
                 icon: 'pi pi-home',
                 items: [
                     {
-                        label: 'Literature',
+                        label: 'Bibliografia',
                         icon: 'pi pi-fw pi-book',
-                        routerLink: ['/literature']
+                        routerLink: ['/bibliografia']
                     }
                 ]
             },
@@ -29,7 +29,18 @@ export class AppMenuComponent implements OnInit {
                     {
                         label: 'Cerrado Cluster',
                         icon: 'pi pi-fw pi-book',
-                        routerLink: ['/literature/cluster']
+                        routerLink: ['/bibliografia/cluster']
+                    }
+                ]
+            },
+            {
+                label: 'Metodo',
+                icon: 'pi pi-home',
+                items: [
+                    {
+                        label: 'Metodo',
+                        icon: 'pi pi-fw pi-book',
+                        routerLink: ['/bibliografia/metodo']
                     }
                 ]
             }

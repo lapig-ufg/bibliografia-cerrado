@@ -1,11 +1,16 @@
 
 <p-tabView>
     <p-tabPanel header="Graphics">
-        
-        <div *ngFor="let data of ['_numero_publicacoes_por_ano.png', '_top_10_autores.png', '_top_10_instituicoes.png', '_top_10_keywords.png','_type_cluster.png']; " class="grid">
-            <div class="flex justify-content-start flex-wrap col-offset-2 col-8">
+        <div *ngFor="let data of imageList">
+        <div   class="grid" *ngIf="imageLoaded[data] !== false">
+            <div class="flex justify-content-start flex-wrap col-offset-2 col-8" >
                 <div class="flex justify-content-evenly w-full">
-                    <p-image [src]="'https://s3.lapig.iesa.ufg.br/public/literatura/'+type_source+'/graph/'+cluster_id+data" [alt]="'Cluster_' +  cluster_id" width="100%" />
+                    <p-image 
+                        [src]="'https://s3.lapig.iesa.ufg.br/public/literatura/'+type_source+'/graph/'+cluster_id+data" 
+                        [alt]="cluster_id+data " 
+                        width="100%" 
+                        (onImageError)="imageLoaded[data] = false"
+                        />
                     
                 </div>
             </div>
@@ -14,10 +19,17 @@
                 <p-button (click)="setCluster(true)" icon="pi pi-step-forward" [rounded]="true" [outlined]="true" />
             </div>
         </div>
+    </div>
+        
         <div class="grid">
             <div class="flex justify-content-start flex-wrap col-offset-2 col-8">
                 <div class="flex justify-content-evenly w-full">
-                    <p-image [src]="getImageUrl()" [alt]="'Cluster_' +  cluster_id" width="100%" />
+                    <p-image 
+                        [src]="getImageUrl()" 
+                        [alt]="'Cluster_' +  cluster_id" 
+                        width="100%" 
+                        
+                        />
                     
                 </div>
             </div>
