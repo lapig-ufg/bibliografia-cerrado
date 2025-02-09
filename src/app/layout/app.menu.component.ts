@@ -18,7 +18,7 @@ export class AppMenuComponent implements OnInit {
                     {
                         label: 'Descrição',
                         icon: 'pi pi-fw pi-book',
-                        routerLink: ['/bibliografia']
+                        routerLink: ['/cienciometria']
                     }
                 ]
             },
@@ -30,12 +30,12 @@ export class AppMenuComponent implements OnInit {
                     {
                         label: 'Busca Amplo',
                         icon: 'pi pi-fw pi-book',
-                        routerLink: ['/bibliografia/amplo']
+                        routerLink: ['/cienciometria/amplo']
                     },
                     {
                         label: 'Busca Restrito',
                         icon: 'pi pi-fw pi-book',
-                        routerLink: ['/bibliografia/restrito']
+                        routerLink: ['/cienciometria/restrito']
                     }
                 ]
             },
