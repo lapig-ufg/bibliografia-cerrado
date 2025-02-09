@@ -7,7 +7,7 @@ import {StatusSource} from "../shared/interface/source";
   providedIn: 'root',
 })
 export class StatusSourceService {
-  private statusSource = new BehaviorSubject<StatusSource>({total:0,pages:0});
+  private statusSource = new BehaviorSubject<StatusSource>({total:0,pages:0,max_cluster:0});
   statusSource$ = this.statusSource.asObservable();
 
   setStatus(dados: StatusSource) {

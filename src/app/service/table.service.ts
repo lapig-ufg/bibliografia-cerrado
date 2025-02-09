@@ -16,11 +16,13 @@ export class TableServices {
 
     private table = new BehaviorSubject<Array<SmallSource>>([]);
     private _search = new BehaviorSubject<string|undefined>(undefined);
+    private _type_sources = new BehaviorSubject<string>('');
+
 
     search$ = this._search.asObservable();
     table$ = this.table.asObservable();
+    type_sources$ = this._type_sources.asObservable();
 
-    type_source: string = environment.typeSource
     cluster!: number | undefined
 
 
@@ -41,9 +43,16 @@ export class TableServices {
 
     ) { }
 
-    setInfo(cluster?: number): void {
+    setInfo(type_source: string, cluster?: number): void {
+        console.log(type_source)
         this.cluster = cluster;
+        this._type_sources.next(type_source);
         this.getSourcesData(INITIAL_PAGE);
+    }
+
+
+    type_source(): string {
+        return this._type_sources.getValue();
     }
 
     public applyFilter(searchFilter: string): void {
@@ -63,6 +72,7 @@ export class TableServices {
 
 
         this.sourceService.getSources(
+            this.type_source(),
             pageIndex,
             this.search,
             this.cluster,
@@ -82,6 +92,7 @@ export class TableServices {
 
     public getTotal(): void {
         this.sourceService.getTotal(
+            this.type_source(),
             this.search,
             this.cluster,
             this.sortState
