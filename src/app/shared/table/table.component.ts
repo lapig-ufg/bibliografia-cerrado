@@ -32,6 +32,7 @@ export class TableComponent implements AfterViewInit {
     full: boolean = true;
     isSorted: boolean | null = false;
     showDialog: boolean = false;
+    type_source: string = '';
 
     @ViewChild('dt') dt!: Table;
 
@@ -49,6 +50,10 @@ export class TableComponent implements AfterViewInit {
         this.tableService.table$.subscribe((table) => {
             this.dataSource = [];
             this.dataSource = table;
+        });
+        this.tableService.type_sources$.subscribe((type_sources) => {
+            this.type_source = type_sources;
+            this.sourceService.getTotal(type_sources)
         });
 
         this.tableService.search$.subscribe((search) => {
@@ -97,7 +102,7 @@ export class TableComponent implements AfterViewInit {
 
     openDialog(sourceID: string) {
         this.showDialog = false;
-        this.sourceService.getSource(sourceID).subscribe(
+        this.sourceService.getSource(this.type_source,sourceID).subscribe(
             (data) => {
                 this.showDialog = false;
                 this.source = data;

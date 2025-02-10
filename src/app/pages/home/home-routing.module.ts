@@ -8,11 +8,17 @@ import {MetodoComponent} from "../metodo/metodo.component";
     imports: [RouterModule.forChild([
         {
             path: '',
-            data: {breadcrumb: 'Cerrado: uma análise cienciométrica'},
-            component: HomeComponent },
+            data: {breadcrumb: 'Metodologia de busca - Base ampla'},
+            component: HomeComponent 
+        },
         {
-            path: 'cluster',
-            data: {breadcrumb: 'Cerrado'},
+            path: 'amplo',
+            data: {breadcrumb: 'Busca Ampla',  type_source: 'cerrado-2025-02-amplo'},
+            component: ClusterComponent
+        },
+        {
+            path: 'restrito',
+            data: {breadcrumb: 'Busca Restrito',  type_source: 'cerrado-2025-02-restrito'},
             component: ClusterComponent
         },
         {

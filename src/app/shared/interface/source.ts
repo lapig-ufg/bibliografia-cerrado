@@ -1,6 +1,7 @@
 export interface StatusSource {
   pages: number,
-  total: number
+  total: number,
+  max_cluster: number
 }
 export interface SmallSource {
     id: string,

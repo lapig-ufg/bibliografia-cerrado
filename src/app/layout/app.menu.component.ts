@@ -12,13 +12,13 @@ export class AppMenuComponent implements OnInit {
     ngOnInit() {
         this.model = [
             {
-                label: 'HOME',
+                label: 'Metodologia',
                 icon: 'pi pi-home',
                 items: [
                     {
-                        label: 'Bibliografia',
+                        label: 'Descrição',
                         icon: 'pi pi-fw pi-book',
-                        routerLink: ['/bibliografia']
+                        routerLink: ['/cienciometria']
                     }
                 ]
             },
@@ -26,24 +26,20 @@ export class AppMenuComponent implements OnInit {
                 label: 'Cluster',
                 icon: 'pi pi-home',
                 items: [
+                    
                     {
-                        label: 'Cerrado Cluster',
+                        label: 'Busca Amplo',
                         icon: 'pi pi-fw pi-book',
-                        routerLink: ['/bibliografia/cluster']
+                        routerLink: ['/cienciometria/amplo']
+                    },
+                    {
+                        label: 'Busca Restrito',
+                        icon: 'pi pi-fw pi-book',
+                        routerLink: ['/cienciometria/restrito']
                     }
                 ]
             },
-            {
-                label: 'Metodo',
-                icon: 'pi pi-home',
-                items: [
-                    {
-                        label: 'Metodo',
-                        icon: 'pi pi-fw pi-book',
-                        routerLink: ['/bibliografia/metodo']
-                    }
-                ]
-            }
+           
         ];
     }
 }

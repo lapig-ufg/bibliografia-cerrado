@@ -28,27 +28,34 @@
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/bibliografia'])" pRipple pStyleClass="@grandparent"
+                    <a (click)="router.navigate(['/cienciometria'])" pRipple pStyleClass="@grandparent"
                         enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                         class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
                         <span>Database</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/bibliografia/cluster'])" pRipple pStyleClass="@grandparent"
+                    <a (click)="router.navigate(['/cienciometria/amplo'])" pRipple pStyleClass="@grandparent"
                         enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                         class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
-                        <span>Clusters</span>
+                        <span>Busca Ampla</span>
                     </a>
                 </li>
                 <li>
+                    <a (click)="router.navigate(['/cienciometria/restrito'])" pRipple pStyleClass="@grandparent"
+                        enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
+                        class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
+                        <span>Busca Restrito</span>
+                    </a>
+                </li>
+                <!--li>
                     <a (click)="router.navigate(['/analysis'])"
                     pRipple pStyleClass="@grandparent"
                         enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                         class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
                         <span>Análise Exploratória</span>
                     </a>
-                </li>
+                </li-->
             </ul>
 
         </div>
@@ -94,36 +101,39 @@
             </div>
 
             <div id="modules" class="my-6 md:my-8">
-                <span class="text-900 block font-bold text-5xl mb-4 text-center">Explore Further</span>
-                <span class="text-700 block text-xl mb-8 text-center line-height-3">This website offers several ways to explore the analysis results.</span>
+                <span class="text-900 block font-bold text-5xl mb-4 text-center">Opções de Exploração</span>
+                <span class="text-700 block text-xl mb-8 text-center line-height-3">Esta plataforma oferece várias maneiras de explorar os resultados da análise, tanto por
+                    meio de uma busca ampla quanto por uma busca mais restrita. Todos os detalhes estão
+                    descritos na metodologia.</span>
 
                 <div class="flex flex-column lg:flex-row align-items-center justify-content-between mt-8 gap-8">
                     <div class="flex flex-column align-items-center">
                         <img animateEnter="scalein"
                             src="assets/layout/images/database.webp" alt="chat"
                             class="w-10 border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4 text-center">Database Access: View the complete dataset of analyzed publications.</span>
+                        <span class="block text-900 text-lg font-semibold mt-4 text-center">Acesso à Base de Dados: Visualize o conjunto completo de publicações sobre o cerrado brasileiro.</span>
                     </div>
                     <div class="flex flex-column align-items-center">
                         <img animateEnter="scalein"
-                            src="assets/layout/images/cluster.webp" alt="chat"
+                            src="assets/layout/images/results.webp" alt="chat"
                             class="w-10 border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4 text-center">Publication Clusters: Investigate the identified clusters of related publications.</span>
+                        <span class="block text-900 text-lg font-semibold mt-4 text-center">Análise estatística: veja o cenário e tendências das publicações sobre o cerrado brasileiro</span>
                     </div>
                     <div class="flex flex-column align-items-center">
                         <img animateEnter="scalein"
-                            src="assets/layout/images/results.webp"
+                            src="assets/layout/images/cluster.webp"
                             alt="chat"
                             class="w-10 border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4 text-center">Results & Analysis: See graphs, charts, and statistical analyses summarizing the findings.</span>
+                        <span class="block text-900 text-lg font-semibold mt-4 text-center">Agrupamento temático: Explore os grupos de publicações que possuem temas semelhantes entre si</span>
                     </div>
                 </div>
             </div>
 
             <div id="data-source" class="my-12 py-12 md:my-6 md:py-6 w-full">
-                <div class="text-900 font-bold text-5xl mb-4 text-center">Data Source</div>
+                <div class="text-900 font-bold text-5xl mb-4 text-center">Fonte de dados</div>
                 <div class="" >
-                    <div class="text-600 text-xl text-justify mb-2 line-height-3 ">The literature used for this analysis was obtained from the <a href="https://openalex.org/" target="_blank">OpenAlex database</a>, a comprehensive open-access repository of scientific publications.</div>
+                    <div class="text-600 text-xl text-justify mb-2 line-height-3 ">
+                        A literatura usada para esta análise foi obtida do banco de dados <a href="https://openalex.org/" target="_blank">OpenAlex</a>, um repositório abrangente de acesso aberto de publicações científicas.</div>
                     <div class="text-600 text-xl text-justify mb-8 line-height-3 ">Priem, J., Piwowar, H., & Orr, R. (2022). OpenAlex: A fully-open index of scholarly works, authors, venues, institutions, and concepts. ArXiv. https://arxiv.org/abs/2205.01833</div>
                 </div>
             </div>

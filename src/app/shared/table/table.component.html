@@ -71,7 +71,7 @@
             <td>{{ rowIndex + 1 }}</td>
             <td pTooltip="{{row.title}}" [innerHTML]="row.title"></td>
             <td pTooltip="{{row.keywords}}" [innerHTML]="row.keywords"></td>
-            <td>{{ row.ismed_first ? 'Medicine' : 'Cerrado' }} {{ row.cluster | number }}</td>
+            <td>{{ row.cluster | number }}</td>
             <td>{{ row.cited_by_count | number }}</td>
             <td>{{ row.publication_date | date }}</td>
             <td>{{ row.referenced_works_count | number }}</td>
